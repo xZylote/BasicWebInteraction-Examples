@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Interactive Systems - Template</title>
+
+	<!-- local stylesheet, see folder 'css'-->
+	<link href="css/main.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+	<body>
+		<!-- Your content -->
+
+		<form id="pizzaOrder" action="">
+
+		<h1>Ihre Bestellung:</h1>
+		
+		<!-- Circles which indicates the steps of the form: -->
+		<div style="text-align:center;margin-top:40px;">
+		  <span class="wizard" id="step1"> <b>&nbsp;1 <br>&nbsp;Ihre Pizza</b></span>
+		  <span class="wizard" id="step2"> <b>&nbsp; &nbsp; &nbsp;2 <br> &nbsp; &nbsp; Belag</b></span>
+		  <span class="wizard" id="step3"> <b>3 Lieferung</b></span>
+		  <span class="wizard" id="step4"> <b>4 Übersicht</b></span>
+		</div>
+
+		<!-- One "tab" for each step in the form: -->
+		<div class="tab" id="tab0" >
+		<h2 align="center" >1. Ihre Pizza</h2>
+		
+			<div class="box">
+				<p align="center" ><b>Größe: </b></p>
+				<input type="radio" id="size_1" name="size" value="1"> Klein &nbsp;&nbsp;&nbsp; 4,00€ <br>
+				<input type="radio" id="size_2" name="size" value="2"> Mittel &nbsp;  5,50€ <br>
+				<input type="radio" id="size_3" name="size" value="3"> Groß &nbsp;&nbsp;&nbsp; 7,00€ 				
+			</div>
+			
+			<div class="box">
+				<p align="center" ><b>Teig: </b></p>
+				<input type="radio" id="dough_1" name="dough" value="1"> Weizen  +0€ <br>
+				<input type="radio" id="dough_2" name="dough" value="2"> Dinkel  +0,50€ <br>				
+			</div>
+			
+			<div class="box">
+				<p align="center" ><b>Soße: </b></p>
+				<input type="radio" id="sauce_1" name="sauce" value="1"> Basilikum  +0€ <br>
+				<input type="radio" id="sauce_2" name="sauce" value="2"> Knoblauch  +0€ <br>
+				<input type="radio" id="sauce_3" name="sauce" value="3"> Scharf  +0,50€ 				
+			</div>
+		
+		
+		</div>
+		
+		<div class="tab" id="tab1" >
+		<h2 align="center" >2. Belag</h2>
+		<hr>
+		<table align="center">
+				<tr>
+		<td>Fisch</td>
+		<td>Ananas</td>
+		<td>Mozzarella</td>
+		<td>Oliven</td>
+		</tr>
+		<tr>
+		<td>+1.50€</td>
+		<td>+99€</td>
+		<td>+0.99€</td>
+		<td>+0.79€</td>
+		</tr>
+
+		<tr>
+		<td valign="top"><img src="images/fisch.png" width = 100 height=100 class="hover"><div class ="text" onclick="add(this, 'Fisch, +1.50€')">+</div></td>
+		<td valign="top"><img src="images/ketzerei.png" width = 100 height=100 class="hover"><div class ="text" onclick="add(this, 'Ananas, +99€')">+</div></td>
+		<td valign="top"><img src="images/mozzarella.png" width = 100 height=100 class="hover"><div class ="text" onclick="add(this, 'Mozzarella, +0.99€')">+</div></td>
+		<td valign="top"><img src="images/oliven.png" width = 100 height=100 class="hover"><div class ="text" onclick="add(this, 'Oliven, +0.79€')">+</div></td>
+		</tr>
+		<tr>
+		<td>Paprika</td>
+		<td>Peperoni</td>
+		<td>Salat</td>
+		<td>Schinken</td>
+		</tr>
+		<tr>
+		<td>+1.19€</td>
+		<td>+1.29€</td>
+		<td>+0.79€</td>
+		<td>+1.79€</td>
+		</tr>
+		<tr>
+		<td valign="top"><img src="images/paprika.png" width = 100 height=100 class="hover"><div class ="text" onclick="add(this, 'Paprika, +1.19€')">+</div></td>
+		<td valign="top"><img src="images/peperoni.png" width = 100 height=100 class="hover"><div class ="text" onclick="add(this, 'Peperoni, +1.29€')">+</div></td>
+		<td valign="top"><img src="images/salat.png" width = 100 height=100 class="hover"><div class ="text" onclick="add(this, 'Salat, +0.79€')">+</div></td>
+		<td valign="top"><img src="images/schinken.png" width = 100 height=100 class="hover"><div class ="text" onclick="add(this, 'Schinken, +1.79€')">+</div></td>
+		</tr>
+
+		</table>
+		<div class="animate">
+		<h4 align="center"> Gewünschte Beläge: </h4>
+			<ul id="todoList"></ul>
+		</div>
+		</div>
+		<div align="center" class="tab" id="tab2" >
+		<h2 align="center" >3. Lieferung</h2>
+		<hr>
+		<h3>Adresse</h3>
+		<div id="addressSelection">
+		<input type="radio" id="oldAdress" name="rad" value="0" onchange="refresh()">
+		<label for="oldAdress">Im Profil hinterlegte Adresse verwenden</label>
+		<br>
+		<input type="radio" id="newAdress" name="rad" value="1" onchange="refresh()">
+		<label for="newAdress">Andere Adresse eingeben</label>
+		</div>
+		<div id="adressField">
+		<form>
+		<input placeholder="Vorname">
+		<input placeholder="Nachname">
+		<br><br>
+		<input placeholder="Straße">
+		<input placeholder="Hausnummer">
+		<br><br>
+		<input placeholder="Postleitzahl">
+		<input placeholder="Stadt">
+		<hr>
+		</form>
+		</div>
+		</div>
+
+		<div class="tab" id="tab3" >
+		<h2 align="center" >4. Übersicht</h2>
+		<hr>
+		<p align="center">Gratulation, Sie haben erfolgreich eine Pizza bestellt!</p>
+		<p align="center">Der Vorgang ist abgeschlossen und die Pizza unterwegs.</p>
+		</div>
+
+		<div style="overflow:auto;">
+		  <div style="float:right;">
+			<input type="button" id="prevBtn" value=&laquo; >
+			<input type="button" id="lastBtn" value="zu Schritt 1">
+			<input type="button" id="nextBtn" value=&raquo;>
+			
+		  </div>
+		</div>
+
+		
+
+		</form>
+
+		<!-- load some scripts -->
+	    <!-- jQuery (necessary for Bootstrap s JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	    <script src="js/main.js"></script>
+	    <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+	</body>
+</html>

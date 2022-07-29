@@ -1,0 +1,143 @@
+html, body {
+	font-family: 'Helvetica Neue', sans-serif;
+}
+
+.header{
+	margin-top:0px;
+}
+
+/* Style the form */
+#pizzaOrder {
+  background-color: #ffffff;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  min-width: 1300px; /* bruh */
+}
+
+
+/* Hide all steps by default: */
+#tab0 {
+  display: none;
+  margin-top: 30px;
+  width: 100%;
+  height: 190px;
+  background-color: #c7c7c7;
+  align-items: top;
+  border-radius: 10px;
+}
+
+/* Make circles that indicate the steps of the form: */
+.wizard {
+  height: 82px;
+  width: 82px;
+  margin: 0 30px;
+  background-color: #578fd4;
+  align-items: center;
+  border:0;
+  border-radius: 50%;
+  display: inline-flex;
+  opacity: 0.5;
+}
+
+.box{
+	display: inline-block;
+	width: 33%;
+	height: 66%;
+	border:2px solid grey;
+	border-radius: 10px;
+	vertical-align: top;
+	padding-left: 130px;
+	padding-right: 130px;
+}
+
+
+#prevBtn{
+	display: inline;
+	font-size: 20px;
+	width: 70px;
+	height: 30px;
+}
+
+#nextBtn{
+	display: inline;
+	font-size: 20px;
+	width: 70px;
+	height: 30px; 
+}
+
+#lastBtn{
+	display: none;
+}
+
+
+/* Mark the active step: */
+.wizard.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished: */
+.wizard.finish {
+  background-color: #4CAF50;
+}
+
+.text {
+	-webkit-transform: translate(-0px, -100px);
+	-ms-transform: translate(-0px, -100px);
+  transform: translate(-0px, -100px);
+  text-align: center;
+   color: green;
+  font-size: 50px;
+  opacity: 0;
+  background-color:rgba(0, 0, 0, 0.3);
+}
+
+.text:hover {
+  opacity: 1;
+  transition: .5s ease;
+  cursor: pointer;
+}
+#adressField {
+	visibility: hidden;
+}
+/* Aus Assignment 4 */
+	 li {
+      line-height: 40px;
+      width: 85%;  
+      padding: 5px 20px;
+      overflow: hidden;
+      height: 0;
+      margin: 0;
+      }
+	  
+      li.show {
+      height: 40px;
+      font-size: 20px;
+      }
+	  
+      ul li:nth-child(odd) {
+      background: LightBlue;
+      }
+      ul li:nth-child(even) {
+      background: LightCyan;
+      }
+	  .animate {
+      perspective: 200px;
+      }
+      .animate li {
+      opacity: 0;
+      transform: rotateX(45deg);
+      transition: all .4s cubic-bezier(.5,-0.5,.5,1.5);
+      }
+      .animate li.show {
+      opacity: 1;
+      transform: none;
+      transition: all .4s cubic-bezier(.5,-0.5,.5,1.5);
+      }
+      .animate li.hide {
+      opacity: 0;
+      transform: none;
+      transition: all .5s cubic-bezier(.5,-0.5,.5,1.5);
+      padding: 0px 5% 0px 5%;  
+      }
+

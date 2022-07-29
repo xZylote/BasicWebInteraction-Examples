@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Interactive Systems - Exercise 7</title>
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Social media icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onresize="windowsize()" onscroll="navscroll()">
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input id=burgerToggle type="checkbox" />
+            <span id=burger1></span>
+            <span id=burger2></span>
+            <span id=burger3></span>
+            <!-- Unter 320px Breite wird es eng -->
+            <ul id="menu">
+                <a id="a1" href="#Start" class="anchor-link">
+                    <li id="Startli">Start</li>
+                </a>
+                <a id="a2" href="#Projekte" class="anchor-link">
+                    <li id="Projli">Projekte</li>
+                </a>
+                <a id="a3" href="#About" class="anchor-link">
+                    <li id="Aboutli">Über uns</li>
+                </a>
+                <a id="a4" href="#Kontakt" class="anchor-link">
+                    <li id="Kontaktli">Kontakt</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <div id="flex">
+        <div id="one">
+            <h1 id=Start class="anchor">BruhMonument</h1>
+            <img src="images/maimai.png" width="220" height="140">
+            <br>
+            <div id="intro" class="fixtext"> Unser Projektteam, bestehend aus dem beiden Studenten Aziz Khashimov und Luca Bosch, hat sich darauf spezialisiert, Übungsaufgaben im Fach 'Interaktive Systeme' mit einer bis dato noch nie dagewesenen Liebe zum Detail zu bearbeiten. Dazu
+                benutzen wir unser gewaltiges Wissen über die Konzepte des Designs und natürlich auch alle Möglichkeiten, die ein HTML-Virtuose so hat. Das Größte an unseren Dienstleistungen ist allerdings, dass sie komplett kostenlos sind. Sie haben
+                richtig gehört. Die Entlohnung erfolgt lediglich durch kleine Almosen in ECTS-Form. Aber man darf natürlich, selbstverständlich und zweifelsohne nicht vergessen, dass man nicht für die Uni lernt, sondern für das Leben, wie auch schon Gandhi
+                oder so sagte.
+            </div>
+        </div>
+        <div id="two">
+            <hr>
+            <h2 id="Projekte" class="anchor">Projekte</h2>
+            <div class="desc">
+                <p style="font-weight: bold; font-size: larger;">Wetterkacheln</p>
+                <a href="projects/Exercise6/index.html">
+                    <img class="image" src="images/1.PNG">
+                </a>
+                <br><br>
+                <div class="fixtext">In diesem Projekt ging es darum, Movable Panels mit Wetterdaten von einer externen API anzuzeigen (mit besonderer Vorliebe für gewisse Städte in Japan). Jedes Panel soll dabei mindestens 5 verschiedene Wetterdaten einer beliebigen Stadt
+                    darstellen. Die Städte können aus einer Liste ausgewählt werden. Der Knopf dafür befindet sich oben in den Kacheln.
+
+                </div>
+            </div>
+            <div class="desc">
+                <p style="font-weight: bold; font-size: larger;">Pizzabelag auswählen</p>
+                <a href="projects/Exercise5/index.html">
+                    <img class="image" src="images/2.PNG">
+                </a>
+                <br><br>
+                <div class="fixtext">In diesem Projekt ging es darum, die zuvor schon aufgebaute Grundstruktur des Pizza-Bestell-Wizards um Icons zur Auswahl der Beläge zu erweitern. Dabei sollte ein Klick auf die Icons, die gewählte Zutat einer Liste hinzufügen und am Ende
+                    bei der Rechnung mit einbezogen werden. Zudem konnte eine Adresse eingegeben oder eine schon gespeichterte genommen werden.
+                </div>
+            </div>
+            <div class="desc">
+                <p style="font-weight: bold; font-size: larger;">Todo-Liste</p>
+                <a href="projects/Exercise3/index.html">
+                    <img class="image" src="images/3.PNG">
+                </a>
+                <br><br>
+                <div class="fixtext">In diesem Projekt ging es darum, eine Todo-Liste zu erstellen, bei der die Verschiedenen Einträge animiert hinzugefügt werden. Weiter war es wichtig, dass die Einträge in ihrer Hintergrundfarbe jeweils abwechselten, um sie besser voneinander
+                    differenzieren zu können. Schließlich sollte auch noch ein Knopf zum löschen an den Einträgen dran sein, auch das erfolgte animiert.
+                </div>
+            </div>
+            <div class="desc">
+                <p style="font-weight: bold; font-size: larger;">Bilder nachladen</p>
+                <a href="projects/Exercise2/index.html">
+                    <img class="image" src="images/4.PNG">
+                </a>
+                <br><br>
+                <div class="fixtext">In diesem Projekt ging es darum, bei einer unendlich langen Liste von Bildern, nur einen Teil davon zu laden, ähnlich wie bei Google. Während neue Bilder geladen wurde, sollte eine Art Ladebalken angezeigt werden, damit der Nutzer sieht,
+                    dass etwas geschieht. Damit diese Animation auch bei lokalen Dateien sichtbar ist, war es notwendig, die Darstellung neuer Bilder zu verzögern.
+                </div>
+            </div>
+            <div class="desc">
+                <p style="font-weight: bold; font-size: larger;">Online-Formular</p>
+                <a href="projects/Exercise1/index.html">
+                    <img class="image" src="images/5.PNG">
+                </a>
+                <br><br>
+                <div class="fixtext">In diesem Projekt ging es darum, ein Formular zu erstellen, dessen Eingabefelder gewissen Normen entsprechen, sodass z.B. das Email-Format erkannt wird. Zudem gab es einige Pflichtfelder. Wichtig war, dass es z.B. durch Einsatz von Placeholdern,
+                    dem Nutzer die Funktionen zu erklären, ohne dadurch ellenlangen Text zu schreiben. Am Ende konnte man seine Eingaben einsehen. </div>
+            </div>
+            <div class="desc">
+                <p style="font-weight: bold; font-size: larger;">Pizzateig auswählen</p>
+                <a href="projects/Exercise4/index.html">
+                    <img class="image" src="images/6.PNG">
+                </a>
+                <br><br>
+                <div class="fixtext">In diesem Projekt ging es darum, ein Grundgerüst für einen Pizza-Bestell-Wizard zu erstellen, mit dessen Hilfe man den Vorgang der Pizzabestellung übersichtlich gestalten kann. Der Fokus lag dabei auf einer Reise durch mehrere Abschnitte,
+                    in denen der Nutzer immer ein paar Auswahlen treffen kann, wie zum Beispiel die Teigsorte, welche hier bereits zur Auswahl steht.
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div id="three">
+            <hr>
+            <h2 id="About" class="anchor">Über uns</h2>
+            <div class="descr">
+                <h3>Wer sind wir?</h3>
+                <div class="fixtextlarge">
+                    Der Herr, der schickt den Jockel aus, Er soll den Hafer schneiden. Der Jockel schneid't den Hafer nicht Und kommt auch nicht nach Hause. Da schickt der Herr den Pudel aus, Er soll den Jockel beißen. Der Pudel beißt den Jockel nicht, Der Jockel schneid't
+                    den Hafer nicht Und kommt auch nicht nach Hause. Da schickt der Herr den Prügel aus, Er soll den Pudel schlagen. Der Prügel schlägt den Pudel nicht, Der Pudel beißt den Jockel nicht, Der Jockel schneid't den Hafer nicht Und kommt auch
+                    nicht nach Hause.
+                </div>
+            </div>
+        </div>
+        <div class="descr">
+            <h3>Was machen wir?</h3>
+            <div class="fixtextlarge">
+                Da schickt der Herr das Feuer aus, Es soll den Prügel brennen. Das Feuer brennt den Prügel nicht, Der Prügel schlägt den Pudel nicht, Der Pudel beißt den Jockel nicht, Der Jockel schneid't den Hafer nicht Und kommt auch nicht nach Hause. Da schickt der
+                Herr das Wasser aus, Es soll das Feuer löschen. Das Wasser löscht das Feuer nicht, Das Feuer brennt den Prügel nicht, Der Prügel schlägt den Pudel nicht, Der Pudel beißt den Jockel nicht, Der Jockel schneid't den Hafer nicht Und kommt
+                auch nicht nach Hause. Da schickt der Herr den Ochsen aus, Er soll das Wasser saufen.
+            </div>
+        </div>
+        <div class="descr">
+            <h3>Woran glauben wir?</h3>
+            <div class="fixtextlarge">
+                Der Ochse säuft das Wasser nicht, Das Wasser löscht das Feuer nicht, Das Feuer brennt den Prügel nicht, Der Prügel schlägt den Pudel nicht, Der Pudel beißt den Jockel nicht, Der Jockel schneid't den Hafer nicht Und kommt auch nicht nach Hause. Da schickt
+                der Herr den Schlachter aus, Er soll den Ochsen schlachten. Der Schlachter schlacht't den Ochsen nicht, Der Ochse säuft das Wasser nicht, Das Wasser löscht das Feuer nicht, Das Feuer brennt den Prügel nicht, Der Prügel schlägt den Pudel
+                nicht, Der Pudel beißt den Jockel nicht, Der Jockel schneid't den Hafer nicht Und kommt auch nicht nach Hause.
+            </div>
+
+
+        </div>
+        <hr>
+
+        <div id="four">
+            <hr>
+            <h2 id="Kontakt" class="anchor">Kontakt</h2>
+            <div id=ktk1 style="background-color: #2615bb;">
+                <h3>Sende uns eine Nachricht</h3>
+                <form>
+                    <input id="name" type="text" placeholder="Name">
+                    <input type="button" value="Löschen" onclick="deln()">
+                    <br>
+                    <input id="mail" type="email" placeholder="Email Adresse">
+                    <input type="button" value="Löschen" onclick="dele()">
+                    <br>
+                    <textarea id="msg" placeholder="Deine Nachricht an uns..." style="height:200px"></textarea>
+                    <br>
+                    <input type="button" value="Senden">
+                    <input type="button" value="Löschen" onclick="delt()">
+
+                </form>
+            </div>
+            <div id=ktk2 style="background-color: #48CAE4;">
+                <h3>Folge uns auf Social Media</h3>
+                <!-- Mit externer social media icon library, siehe head -->
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                <a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+                <a href="https://www.google.com/" class="fa fa-google"></a>
+                <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+h1 {
+    padding: 60px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    padding: 5px;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+#menuToggle {
+    display: block;
+    position: relative;
+    left: 20px;
+    z-index: 1;
+    user-select: none;
+}
+
+#menuToggle a {
+    color: black;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    float: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#menuToggle a:hover {
+    color: #48CAE4;
+}
+
+#menuToggle input {
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    top: 8px;
+    left: 12px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 500;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: fixed;
+    background: grey;
+    border-radius: 3px;
+    z-index: 100;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.45s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.45s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+    top: 0px;
+    z-index: 2;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+    top: 38px;
+    z-index: 300;
+}
+
+#menuToggle span:nth-last-child(3) {
+    transform-origin: 0% 100%;
+    top: 29px;
+    z-index: 1;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #000000;
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    background: rgb(225, 225, 225);
+    transform: scale(13.4525) translate(-20.25px, 1.6425px);
+}
+
+#menu {
+    position: fixed;
+    width: 100%;
+    margin: -20px 0 0 50px;
+    padding: 4px;
+    background: rgb(225, 225, 225);
+    transform-origin: 0% 0%;
+    transform: translate(-200%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    list-style-type: none;
+    z-index: 50;
+}
+
+#menu li {
+    padding: 14px 0;
+    font-size: 16px;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+#one {
+    background-color: white;
+    font-size: 16px;
+}
+
+#two {
+    background-color: #CAF0F8;
+    font-size: 16px;
+}
+
+#three {
+    background-color: #ADE8F4;
+    font-size: 16px;
+}
+
+#four {
+    background-color: #48CAE4;
+    font-size: 16px;
+}
+
+#flex {
+    text-align: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 2px 2px;
+    background: rgba(128, 128, 128, 0.5);
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+input[type=text],
+input[type=email] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+input[type=button] {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=button]:hover {
+    cursor: pointer;
+}
+
+.selected {
+    color: red;
+}
+
+.image {
+    width: 270px;
+    height: 270px;
+    border-radius: 10px;
+}
+
+.desc {
+    float: left;
+    background-color: #CAF0F8;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+/*Platzintensiv, dafür funktioniert dann die Live-Navbar-Erkennung*/
+
+.fixtextlarge {
+    height: 500px;
+    overflow-y: auto;
+    /* Wenn man es auf die Spitze treibt (Fensterbreite < 100px)*/
+}
+
+.fixtext {
+    height: 220px;
+    overflow-y: auto;
+}
+
+.descr {
+    float: left;
+    background-color: #ADE8F4;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 29.33333%;
+}

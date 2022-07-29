@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Interactive Systems - Template</title>
+
+	<!-- local stylesheet, see folder 'css'-->
+	<link href="css/main.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+	<body>
+
+		<h1 class="header" contenteditable="true">Simple Template</h1>
+		<p class="intro" contenteditable="true">Das Template kann für alle Übungen verwendet werden.</p>
+
+		<!-- Your content -->
+
+		<form id="pizzaOrder" action="">
+
+		<h1>Ihre Bestellung:</h1>
+		
+		<!-- Circles which indicates the steps of the form: -->
+		<div style="text-align:center;margin-top:40px;">
+		  <span class="wizard" id="step1"> <b>&nbsp;1 <br>&nbsp;Ihre Pizza</b></span>
+		  <span class="wizard" id="step2"> <b>&nbsp; &nbsp; &nbsp;2 <br> &nbsp; &nbsp; Belag</b></span>
+		  <span class="wizard" id="step3"> <b>3 Lieferung</b></span>
+		  <span class="wizard" id="step4"> <b>4 Übersicht</b></span>
+		</div>
+
+		<!-- One "tab" for each step in the form: -->
+		<div class="tab" id="tab0" >
+		<h2 align="center" >1. Ihre Pizza</h2>
+		
+			<div class="box">
+				<p align="center" ><b>Größe: </b></p>
+				<input type="radio" id="size_1" name="size" value="1"> Klein &nbsp;&nbsp;&nbsp; 4,00€ <br>
+				<input type="radio" id="size_2" name="size" value="2"> Mittel &nbsp;  5,50€ <br>
+				<input type="radio" id="size_3" name="size" value="3"> Groß &nbsp;&nbsp;&nbsp; 7,00€ 				
+			</div>
+			
+			<div class="box">
+				<p align="center" ><b>Teig: </b></p>
+				<input type="radio" id="dough_1" name="dough" value="1"> Weizen  +0€ <br>
+				<input type="radio" id="dough_2" name="dough" value="2"> Dinkel  +0,50€ <br>				
+			</div>
+			
+			<div class="box">
+				<p align="center" ><b>Soße: </b></p>
+				<input type="radio" id="sauce_1" name="sauce" value="1"> Basilikum  +0€ <br>
+				<input type="radio" id="sauce_2" name="sauce" value="2"> Knoblauch  +0€ <br>
+				<input type="radio" id="sauce_3" name="sauce" value="3"> Scharf  +0,50€ 				
+			</div>
+		
+		
+		</div>
+		
+		<div class="tab" id="tab1" >
+		<h2 align="center" >2. Belag</h2>
+		<p>Placeholder</p>
+		</div>
+
+		<div class="tab" id="tab2" >
+		<h2 align="center" >3. Lieferung</h2>
+		<p>Placeholder</p>
+		</div>
+
+		<div class="tab" id="tab3" >
+		<h2 align="center" >4. Übersicht</h2>
+		<p>Placeholder</p>
+		</div>
+
+		<div style="overflow:auto;">
+		  <div style="float:right;">
+			<input type="button" id="prevBtn" value=&laquo; >
+			<input type="button" id="lastBtn" value="to Step 1">
+			<input type="button" id="nextBtn" value=&raquo;>
+			
+		  </div>
+		</div>
+
+		
+
+		</form>
+
+
+
+
+
+
+
+
+		<footer contenteditable="true">Interactive Systems - 2020</footer>
+
+		<!-- load some scripts -->
+	    <!-- jQuery (necessary for Bootstrap s JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	    <script src="js/main.js"></script>
+	    <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+	</body>
+</html>

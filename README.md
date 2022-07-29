@@ -1,0 +1,38 @@
+### Genügt den folgenden Anforderungen
+
+- Abschnitt 1 (siehe auch Beschreibung oben)
+  - Es ist ein Logo zu sehen.
+  - Es ist ein Startupname zu sehen.
+  - Es ist eine kurze Beschreibung zu sehen.
+- Abschnitt 2 (siehe auch Beschreibung oben)
+  - Mindestens 5 Projekte werden präsentiert.
+  - Ein Projekt wird mit einem Screenshot, einer kurzen Beschreibung und einem Link präsentiert.
+  - Nutze Sie ein Grid o.Ä., welches bei einer Fensterbreite größer als 720 Pixel wenigstens zwei Spalten hat.
+  - Bei einer kleineren Breite als 720 Pixel sollen die Einträge übereinander liegen (Pattern: *Vertical Stack*)
+- Abschnitt 3 (siehe auch Beschreibung oben)
+  - Es gibt drei Unterabschnitte mit Überschrift und Text.
+  - Bei einer Fensterbreite größer als 720 Pixel sollen die Abschnitte nebeneinander angeordnet sein (3 Spalten).
+  - Bei einer kleineren Breite als 720 Pixel sollen die drei Unterabschnitte übereinander liegen (Pattern: *Vertical Stack*)
+- Abschnitt 4 (siehe auch Beschreibung oben)
+  - Es gibt zwei Unterabschnitte: einen für die *Social Links* und einen weiteren für das Kontaktformular.
+  - Unterabschnitt 1: Es gibt wenigstens 3 Links zu den Social-Media Seiten des Startups (Pattern: *Social Links)*.
+  - Unterabschnitt 2: Es gibt ein Kontaktformular in welchem der Nutzer seinen Namen, E-Mail Adresse und eine Nachricht eingeben kann.
+  - Bei einer Fensterbreite größer als 720 Pixel sollen die zwei Unterabschnitte nebeneinander angeordnet sein.
+  - Bei einer kleineren Breite als 720 Pixel sollen die drei Unterabschnitte übereinander liegen (Pattern: *Vertical Stack*)
+  - Implementieren sie für die Eingabefelder Name und E-Mail Adresse einen Button der den eingegeben Text löscht (Pattern: *Text Clear Button*).
+- Navigationsleiste
+  - Beim Klicken eines Eintrags wird zum entsprechenden Abschnitt gescrollt. Das Scrollen soll animiert sein.
+  - Die Einträge der Navigationsleiste sind hervorgehoben entsprechend dem Abschnitt in welchem sich der Nutzer befindet.
+  - Spätestens bei eine Fensterbreite kleiner oder gleich 360 Pixel soll die Leiste zu einem Hamburger-Menü umgewandelt werden. Dabei gilt:
+    - Ein Symbol für das Menü soll die bisherigen Einträge ersetzen.
+    - Beim Anklicken des Symbols soll ein Menü eingeblendet werden, welches die selbe Funktionalität bietet, wie die Navigationsleiste (siehe oben).
+- Responsive Design:
+  - Die Seite passt sich an die Fensterbreite angemessen an.
+  - Die Seite soll mit den Breiten 320 Pixel, 720 Pixel und bei maximiertem Browserfenster benutzerfreundlich zu betrachten sein.
+- Generelles Layout und visuelles Design:
+  - Es gibt keine groben Verletzungen der Gestaltgesetze.
+  - Die Grundlagen der UI Gestaltung werden für die Aufgabe angemessen berücksichtigt.
+  - Die 4 Abschnitte sind angemessen voneinander getrennt (z.B. verschiedene Überschriften, Hintergründe o.Ä.)
+    - Sie können z.B. das Pattern *Hairlines* nutzen, müssen aber nicht.
+  - Es wird auf angemessene Ränder und Abstände zwischen Elementen geachtet.
+  - Es wird auf angemessene Farben und Schriftgrößen geachtet.

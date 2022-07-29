@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <style>
+        em {
+            visibility: hidden;
+        }
+    </style>
+    <title>Assignment 1</title>
+    <meta charset="UTF-8" />
+    <script type="text/JavaScript">
+        function showMessage(){ m1.innerHTML = document.getElementById("fName").value + " "; m2.innerHTML = document.getElementById("lName").value; m3.innerHTML = document.getElementById("street").value; m4.innerHTML = document.getElementById("nr").value +",
+        "; m5.innerHTML = document.getElementById("po").value + " "; m6.innerHTML = document.getElementById("city").value + ", "; m7.innerHTML = document.getElementById("country").value; m8.innerHTML = document.getElementById("email").value; m9.innerHTML
+        = document.getElementById("bDate").value; m10.innerHTML = document.getElementById("interests").value; var radioo = document.getElementsByName('rad'); for (var i=0, length = radioo.length; i
+        <length; i++) { if (radioo[i].checked) { m11.innerHTML=r adioo[i].value; break; } } if (document.getElementById( "news").checked==0 ) { m12.innerHTML="don't" ; } if (document.getElementById( "news").checked==1 ) { m12.innerHTML="" ; } document.getElementById(
+            "x").style.visibility="visible" ; } </script>
+</head>
+
+<body>
+    <h1>Personal Data Input</h1>
+    <h2>A simple input form.</h2>
+    <form>
+        <fieldset>
+            <p>
+                <label>Name: </label>
+                <input type="text" id="fName" placeholder="First Name" required="required" value="" />
+                <input type="text" required="required" id="lName" placeholder="Last Name" value="" />
+            </p>
+            <p>
+                <label>Address: </label>
+                <input type="text" id="street" placeholder="Street" />
+                <input type="number" id="nr" placeholder="Number" />
+            </p>
+            <p>
+                <label>District: </label>
+                <input type="number" id="po" maxlength="5" placeholder="Postal Code" />
+                <input type="text" placeholder="City" id="city" value="" />
+            </p>
+            <p>
+                <label>Country: </label>
+                <select id="country">
+            <option value = "Germany">Germany</option>
+            <option value = "France">France</option>
+            <option value = "Spain">Spain</option>
+            <option value = "Italy">Italy</option>
+          </select>
+            </p>
+            <p>
+                <label>Email: </label>
+                <input type="email" id="email" placeholder="max.mustermann@uni.kn" required="required" />
+            </p>
+            <p>
+                <label>Birthdate: </label>
+                <input type="date" id="bDate" />
+            </p>
+
+            <p>
+                <label>Interests: </label>
+                <textarea id="interests" placeholder="Playing football, reading, etc." rows="3" cols="80"></textarea>
+            </p>
+            <p>
+                <label>Gender</label>
+                <input type="radio" name="rad" id="1" value="Male" />
+                <label for="1">Male</label>
+                <input type="radio" name="rad" id="2" value="Female" />
+                <label for="2">Female</label>
+                <input type="radio" name="rad" id="3" value="Diverse" />
+                <label for="3">Diverse</label>
+            </p>
+            <p>
+                <input type="checkbox" id="news" value="Newsletter" />
+                <label for="Newsletter">Newsletter?</label>
+            </p>
+            <p>
+                <input type="button" onclick="showMessage()" value="Submit" />
+            </p>
+        </fieldset>
+    </form>
+    <em id="x">
+	<p> Your name is: <span id = "m1"></span><span id = "m2"></span> </p>
+	<p> You live here: <span id = "m3"></span><span> </span><span id = "m4"></span><span id = "m5"></span><span id = "m6"></span><span id = "m7"></span></p>
+	<p> Your email adress is: <span id = "m8"></span> </p>
+	<p> You were born on this day: <span id = "m9"></span> </p>
+	<p> You said you're interested in the following: <span id = "m10"></span> </p>
+	<p> Your gender is: <span id = "m11"></span></p>
+	<p> You said you <span id = "m12"></span> want a newsletter</p>
+	</em>
+</body>
+
+</html>
